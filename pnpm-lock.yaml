@@ -33,9 +33,15 @@ devDependencies:
   '@storybook/blocks':
     specifier: 7.0.11
     version: 7.0.11(react-dom@18.2.0)(react@18.2.0)
+  '@storybook/manager-api':
+    specifier: ^7.0.11
+    version: 7.0.11(react-dom@18.2.0)(react@18.2.0)
   '@storybook/testing-library':
     specifier: 0.0.14-next.2
     version: 0.0.14-next.2
+  '@storybook/theming':
+    specifier: ^7.0.11
+    version: 7.0.11(react-dom@18.2.0)(react@18.2.0)
   '@storybook/vue3':
     specifier: 7.0.11
     version: 7.0.11(vue@3.2.47)
