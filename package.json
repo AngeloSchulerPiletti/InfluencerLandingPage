@@ -21,6 +21,7 @@
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.0.0",
     "@rushstack/eslint-patch": "^1.2.0",
     "@storybook/addon-essentials": "7.0.11",
     "@storybook/addon-interactions": "7.0.11",
