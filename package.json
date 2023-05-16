@@ -17,6 +17,7 @@
     "pinia": "^2.0.35",
     "sass": "^1.62.1",
     "storybook-tailwind-foundations": "^1.1.2",
+    "stylelint-config-tailwindcss": "^0.0.7",
     "swiper": "^9.3.1",
     "vue": "^3.3.2",
     "vue-router": "^4.1.6"
