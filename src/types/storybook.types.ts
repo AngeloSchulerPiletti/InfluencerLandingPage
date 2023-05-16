@@ -1,5 +1,8 @@
 import { type StoryObj } from '@storybook/vue3'
 
-export type StoryObjProped<Component, Props> = StoryObj<Component> & {
+export type StoryObjProped<
+  Component,
+  Props = undefined
+> = StoryObj<Component> & {
   args: Props
 }
