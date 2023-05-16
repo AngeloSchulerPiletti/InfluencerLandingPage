@@ -7,6 +7,7 @@ import { type FreeModeOptions, type SwiperOptions } from 'swiper/types'
 import SgCarouselCard, {
   type Props as CardProps,
 } from '@/components/SgCarousel/SgCarouselCard.vue'
+import { computed } from 'vue'
 
 export interface Props {
   carouselCards: CardProps[]
@@ -20,7 +21,7 @@ const props = withDefaults(defineProps<Props>(), {
 const breakpoints: SwiperOptions['breakpoints'] = {
   1: {
     slidesPerView: 1,
-    spaceBetween: 8,
+    spaceBetween: 16,
   },
   744: {
     slidesPerView: 2,
@@ -32,6 +33,10 @@ const breakpoints: SwiperOptions['breakpoints'] = {
   },
 }
 
+const getInitialSlide = computed(() =>
+  props.from === 'left' ? props.carouselCards.length - 1 : 0
+)
+
 const modules = [Mousewheel, FreeMode]
 
 const freeMode: FreeModeOptions = {
@@ -42,8 +47,10 @@ const freeMode: FreeModeOptions = {
 <template>
   <div>
     <Swiper
+      class="!px-10"
       :breakpoints="breakpoints"
       :modules="modules"
+      :initial-slide="getInitialSlide"
       :free-mode="freeMode"
       :pagination="{ clickable: true }"
       :mousewheel="{
@@ -53,9 +60,11 @@ const freeMode: FreeModeOptions = {
       <SwiperSlide
         v-for="(card, index) in carouselCards"
         :key="index"
-        class="!h-auto"
       >
-        <SgCarouselCard v-bind="card" />
+        <SgCarouselCard
+          v-bind="card"
+          class="h-[280px]"
+        />
       </SwiperSlide>
     </Swiper>
   </div>

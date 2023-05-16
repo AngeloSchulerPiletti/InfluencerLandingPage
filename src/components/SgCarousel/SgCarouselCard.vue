@@ -12,17 +12,15 @@ export interface Props {
 }
 
 const props = defineProps<Props>()
-
-const backgroundImage = computed(() => {
-  return `background-image: url('${props.image.url}')`
-})
 </script>
 
 <template>
-  <div
-    class="relative overflow-hidden rounded-2xl"
-    :styles="backgroundImage"
-  >
+  <div class="relative overflow-hidden rounded-2xl">
+    <img
+      class="absolute -z-10 h-full w-full object-cover"
+      :src="image.url"
+      :alt="image.alt"
+    />
     <div
       v-if="frame?.iconName"
       class="absolute left-0 top-0"
