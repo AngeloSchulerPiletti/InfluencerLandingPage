@@ -18,7 +18,7 @@
     "sass": "^1.62.1",
     "storybook-tailwind-foundations": "^1.1.2",
     "swiper": "^9.3.1",
-    "vue": "^3.2.47",
+    "vue": "^3.3.2",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
@@ -61,6 +61,7 @@
     "tailwindcss": "^3.3.2",
     "typescript": "~5.0.4",
     "vite": "^4.3.4",
+    "vite-svg-loader": "^4.0.0",
     "vue-tsc": "^1.6.4"
   }
 }
