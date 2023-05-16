@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 //@ts-ignore
 import { Mousewheel, FreeMode } from 'swiper'
-import { type FreeModeOptions, type SwiperOptions } from 'swiper/types'
+//@ts-ignore
+import type { FreeModeOptions, SwiperOptions } from 'swiper/types'
 import SgCarouselCard, {
   type Props as CardProps,
 } from '@/components/SgCarousel/SgCarouselCard.vue'
