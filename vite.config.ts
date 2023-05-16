@@ -11,7 +11,4 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  optimizeDeps: {
-    exclude: ['swipper/vue', 'swipper/types'],
-  },
 })
