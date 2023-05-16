@@ -1,0 +1,59 @@
+@layer base {
+  h1,
+  .h1 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    @screen lg {
+      font-size: 56px;
+      line-height: 64px;
+    }
+  }
+
+  h2,
+  .h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    @screen lg {
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+
+  h3,
+  .h3 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    @screen lg {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  h4,
+  .h4 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    @screen lg {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  h5,
+  .h5 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  h6,
+  .h6 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
