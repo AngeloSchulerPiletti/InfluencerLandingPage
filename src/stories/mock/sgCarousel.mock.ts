@@ -1,4 +1,5 @@
 import { type Props } from '@/components/SgCarousel/SgCarousel.vue'
+import { type Props as CardProps } from '@/components/SgCarousel/SgCarouselCard.vue'
 import type { Image } from '@/types/media.types'
 import { faker } from '@faker-js/faker'
 
@@ -18,9 +19,10 @@ const getImage = (): Image => ({
   alt: faker.lorem.words(5),
 })
 
-export const getCarouselCard = (withFrame: boolean = false) => ({
+export const getCarouselCard = (withFrame: boolean = false): CardProps => ({
   image: getImage(),
   frame: withFrame ? getFrame() : undefined,
+  link: 'https://google.com',
 })
 
 export const SgCarouselLeftMock: Props = {

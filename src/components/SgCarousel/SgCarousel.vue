@@ -64,7 +64,7 @@ const freeMode: FreeModeOptions = {
       >
         <SgCarouselCard
           v-bind="card"
-          class="h-[280px]"
+          class="block h-[280px]"
         />
       </SwiperSlide>
     </Swiper>
