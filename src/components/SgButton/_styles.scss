@@ -1,0 +1,36 @@
+.clicable {
+  @apply rounded-full px-8 font-medium uppercase outline-0;
+  @apply flex justify-center;
+  @apply h-fit w-fit gap-3;
+  @apply transition duration-200 ease-in-out;
+  @apply cursor-pointer;
+
+  &--sm {
+    @apply h-12 px-6 text-xs leading-6;
+  }
+
+  &--md {
+    @apply h-[52px] px-6 text-md leading-[28px];
+  }
+
+  &--lg {
+    @apply h-16 px-8 text-lg leading-8;
+  }
+
+  &--fill {
+    @apply bg-primary-400 text-secondary-400;
+    @apply hover:bg-primary-500;
+    @apply disabled:bg-secondary-500 disabled:text-secondary-300;
+  }
+
+  &--outline {
+    @apply border border-secondary-100 text-secondary-100 ring-0;
+    @apply hover:bg-secondary-400 hover:text-primary-400 hover:ring-primary-400;
+    @apply disabled:border-secondary-300;
+    @apply disabled:text-secondary-300 disabled:ring-secondary-300;
+  }
+
+  &:disabled {
+    @apply pointer-events-none;
+  }
+}
