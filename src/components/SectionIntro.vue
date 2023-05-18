@@ -15,7 +15,7 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-  <div class="flex flex-col gap-10 py-7">
+  <div class="flex flex-col gap-20 py-7">
     <SgTextContent v-bind="textContent" />
     <SgCarousel v-bind="carousel" />
   </div>
