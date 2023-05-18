@@ -17,7 +17,7 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-  <div class="relative my-10 flex flex-col gap-10 bg-secondary-900 pb-10 pt-14">
+  <div class="relative mt-10 flex flex-col gap-10 bg-secondary-900 pb-10 pt-14">
     <div
       class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-neutral-50 p-4"
     >
