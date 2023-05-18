@@ -3,6 +3,7 @@ import ViewHome, { type Props } from '@/components/ViewHome.vue'
 import type { StoryObjProped } from '@/types/storybook.types'
 import { SectionNavigationMock } from '@/stories/mock/sectionNavigation.mock'
 import { SectionIntroMock } from '@/stories/mock/sectionIntro.mock'
+import { SectionContentMock } from '@/stories/mock/sectionContent.mock'
 
 const meta: Meta<typeof ViewHome> = {
   title: 'Views/Home',
@@ -20,5 +21,6 @@ export const Home: Story = {
   args: {
     navigation: SectionNavigationMock,
     intro: SectionIntroMock,
+    content: SectionContentMock,
   },
 }
