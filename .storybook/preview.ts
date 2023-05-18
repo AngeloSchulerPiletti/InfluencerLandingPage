@@ -3,6 +3,7 @@ import { App } from 'vue'
 import '@/assets/scss/index.scss'
 //@ts-ignore
 import { router } from '@/routes'
+import viewports from './viewports'
 
 setup((app: App) => {
   app.use(router)
@@ -16,6 +17,9 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/,
       },
+    },
+    viewport: {
+      viewports: viewports,
     },
   },
 }
