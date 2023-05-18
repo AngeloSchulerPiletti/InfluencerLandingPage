@@ -17,7 +17,10 @@ const props = defineProps<Props>()
 <template>
   <div class="flex flex-col gap-8 bg-secondary-900 py-8">
     <div>
-      <SgTextContent v-bind="textContent" />
+      <SgTextContent
+        v-bind="textContent"
+        class="wrapper"
+      />
     </div>
     <div>
       <SgLinkList v-bind="linkList" />

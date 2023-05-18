@@ -19,7 +19,10 @@ const props = defineProps<Props>()
     <div
       class="background-blur absolute bottom-0 left-0 -z-10 h-[1000px] w-[1000px] -translate-x-1/2 translate-y-1/2 lg:h-[2000px] lg:w-[2000px]"
     ></div>
-    <SgTextContent v-bind="textContent" />
+    <SgTextContent
+      v-bind="textContent"
+      class="wrapper"
+    />
     <SgCarousel v-bind="carousel" />
   </div>
 </template>

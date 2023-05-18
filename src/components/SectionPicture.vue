@@ -12,7 +12,7 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-  <div class="relative overflow-hidden py-14">
+  <div class="wrapper relative overflow-hidden py-14">
     <div
       class="background-blur absolute left-0 top-1/2 -z-10 h-[1000px] w-[1000px] -translate-x-1/2 -translate-y-1/2"
     ></div>

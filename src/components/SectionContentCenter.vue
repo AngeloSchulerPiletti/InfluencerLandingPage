@@ -11,7 +11,7 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-  <div class="background-blur pb-14 pt-[70px]">
+  <div class="background-blur wrapper pb-14 pt-[70px]">
     <div>
       <SgTextContent v-bind="textContent" />
     </div>

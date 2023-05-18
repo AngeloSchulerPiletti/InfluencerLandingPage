@@ -35,7 +35,7 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-  <div>
+  <div class="m-auto max-w-[1440px]">
     <div>
       <SectionNavigation v-bind="navigation" />
     </div>

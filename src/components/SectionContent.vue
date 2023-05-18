@@ -28,7 +28,10 @@ const props = defineProps<Props>()
       />
     </div>
     <div>
-      <SgTextContent v-bind="textContent" />
+      <SgTextContent
+        v-bind="textContent"
+        class="wrapper"
+      />
     </div>
     <div>
       <SgCarousel v-bind="carousel" />

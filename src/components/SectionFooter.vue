@@ -13,18 +13,19 @@ const props = defineProps<Props>()
 
 <template>
   <footer
-    class="relative flex flex-col items-center gap-16 bg-secondary-900 pb-8 pt-20 text-neutral-50"
+    class="wrapper relative flex flex-col items-center gap-16 rounded-t-2xl bg-secondary-900 pb-8 pt-20 text-neutral-50"
   >
     <div
       class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary-900 p-4"
     >
       <SgIcon name="share" />
     </div>
-    <div class="flex gap-7 text-sm max-md:flex-col">
+    <div class="grid grid-rows-2 gap-7 text-sm md:grid-cols-2 md:grid-rows-1">
       <div class="flex flex-col gap-2">
         <p
           v-for="(paragraph, index) in paragraphs"
           :key="index"
+          class="font-light"
         >
           {{ paragraph }}
         </p>
