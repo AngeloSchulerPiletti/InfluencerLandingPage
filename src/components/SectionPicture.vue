@@ -30,7 +30,8 @@ const props = defineProps<Props>()
       <SgLink
         :to="link.to"
         :variant="link.variant"
-        :size="link.size"
+        size="md"
+        apply-styles
       >
         {{ link.title }}
       </SgLink>
