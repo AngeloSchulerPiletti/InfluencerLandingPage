@@ -7,6 +7,7 @@ import { SectionContentMock } from '@/stories/mock/sectionContent.mock'
 import { SectionContentCenterMock } from '@/stories/mock/sectionContentCenter.mock'
 import { SectionLinksMock } from '@/stories/mock/sectionLinks.mock'
 import { SectionPictureMock } from './mock/sectionPicture.mock'
+import { SectionFooterMock } from './mock/sectionFooter.mock'
 
 const meta: Meta<typeof ViewHome> = {
   title: 'Views/Home',
@@ -28,5 +29,6 @@ export const Home: Story = {
     contentCenter: SectionContentCenterMock,
     links: SectionLinksMock,
     picture: SectionPictureMock,
+    footer: SectionFooterMock,
   },
 }
