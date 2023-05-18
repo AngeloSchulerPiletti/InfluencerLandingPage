@@ -2,7 +2,7 @@ import { type Props } from '@/components/SgCarousel/SgCarousel.vue'
 import { type Props as CardProps } from '@/components/SgCarousel/SgCarouselCard.vue'
 import type { Image } from '@/types/media.types'
 import { faker } from '@faker-js/faker'
-import { getRandomIconName } from '@/stories/mock/helper'
+import { getImage, getRandomIconName } from '@/stories/mock/helper'
 
 const getFrame = () => {
   const iconName = getRandomIconName()
@@ -11,11 +11,6 @@ const getFrame = () => {
     paragraph: faker.lorem.words({ min: 3, max: 20 }),
   }
 }
-
-const getImage = (): Image => ({
-  url: faker.image.url(),
-  alt: faker.lorem.words(5),
-})
 
 export const getCarouselCard = (withFrame: boolean = false): CardProps => ({
   image: getImage(),
