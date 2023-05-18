@@ -1,11 +1,13 @@
 <script lang="ts" setup>
 import SgLink, { type SlotedProps as LinkProps } from '@/components/SgLink.vue'
+import { computed } from 'vue'
 
 export interface Props {
   title: string
-  paragraph: string
+  paragraphs?: string[]
   alignment?: AlignmentTypes
   link?: LinkProps
+  darkMode?: boolean
 }
 
 type AlignmentTypes = 'left' | 'center' | 'right'
@@ -18,6 +20,19 @@ const textContentAlignments: { [key in AlignmentTypes]: [string, string] } = {
 
 const props = withDefaults(defineProps<Props>(), {
   alignment: 'left',
+  darkMode: false,
+})
+
+const getTextClasses = computed(() => {
+  const classes = [textContentAlignments[props.alignment][1]]
+  if (props.darkMode) {
+    classes.push('text-neutral-50')
+  }
+  return classes
+})
+
+const getButtonVariant = computed(() => {
+  return props.darkMode ? 'fill-dark' : 'fill'
 })
 </script>
 
@@ -26,17 +41,23 @@ const props = withDefaults(defineProps<Props>(), {
     class="flex flex-col gap-4"
     :class="textContentAlignments[alignment][0]"
   >
-    <h2 :class="textContentAlignments[alignment][1]">
+    <h2 :class="getTextClasses">
       {{ title }}
     </h2>
-    <p :class="textContentAlignments[alignment][1]">
-      {{ paragraph }}
-    </p>
+    <div v-if="paragraphs">
+      <p
+        :class="getTextClasses"
+        v-for="(paragraph, index) in paragraphs"
+        :key="index"
+      >
+        {{ paragraph }}
+      </p>
+    </div>
     <SgLink
       v-if="link"
       :to="link.to"
       apply-styles
-      variant="fill"
+      :variant="getButtonVariant"
       size="sm"
     >
       {{ link.title }}
