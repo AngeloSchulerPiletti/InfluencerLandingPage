@@ -44,6 +44,8 @@ const IconComponent = defineAsyncComponent(
 
 <style lang="scss" scoped>
 .icon {
+  @apply shrink-0;
+
   &--xxs {
     @apply h-4 w-4;
   }
