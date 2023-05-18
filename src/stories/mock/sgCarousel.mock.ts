@@ -2,12 +2,10 @@ import { type Props } from '@/components/SgCarousel/SgCarousel.vue'
 import { type Props as CardProps } from '@/components/SgCarousel/SgCarouselCard.vue'
 import type { Image } from '@/types/media.types'
 import { faker } from '@faker-js/faker'
-
-const icons = ['pinterest', 'youtube', 'twitter', 'google']
+import { getRandomIconName } from '@/stories/mock/helper'
 
 const getFrame = () => {
-  const int = faker.number.int({ min: 0, max: 3 })
-  const iconName = icons[int]
+  const iconName = getRandomIconName()
   return {
     iconName,
     paragraph: faker.lorem.words({ min: 3, max: 20 }),
