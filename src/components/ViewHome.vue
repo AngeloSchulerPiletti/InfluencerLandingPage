@@ -23,7 +23,7 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-  <div class="flex flex-col gap-10">
+  <div>
     <div>
       <SectionNavigation v-bind="navigation" />
     </div>
