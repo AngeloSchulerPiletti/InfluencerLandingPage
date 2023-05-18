@@ -13,14 +13,12 @@ const props = defineProps<Props>()
 
 <template>
   <footer
-    class="relative flex flex-col items-center gap-8 bg-secondary-900 pb-8 pt-20"
+    class="relative flex flex-col items-center gap-16 bg-secondary-900 pb-8 pt-20 text-neutral-50"
   >
     <div
-      class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-neutral-50 p-4"
+      class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary-900 p-4"
     >
-      <div class="rounded-full bg-secondary-900 p-4">
-        <SgIcon name="share" />
-      </div>
+      <SgIcon name="share" />
     </div>
     <div class="flex gap-7 text-sm max-md:flex-col">
       <div class="flex flex-col gap-2">
@@ -35,13 +33,15 @@ const props = defineProps<Props>()
         <SgLink
           :to="link.to"
           variant="text"
+          apply-styles
           v-for="(link, index) in links"
           :key="index"
+          class="w-fit"
         >
           {{ link.title }}
         </SgLink>
       </div>
     </div>
-    <span>&#169;{{ copyright }}</span>
+    <span class="font-light">&#169;{{ copyright }}</span>
   </footer>
 </template>
