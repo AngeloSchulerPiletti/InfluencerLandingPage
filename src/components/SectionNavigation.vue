@@ -15,7 +15,9 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-  <nav class="flex items-center justify-between px-6 py-4 shadow-md">
+  <nav
+    class="flex items-center justify-between bg-neutral-50 px-6 py-4 shadow-md"
+  >
     <div class="overflow-hidden rounded-full">
       <img
         class="h-16 w-16 object-cover"
