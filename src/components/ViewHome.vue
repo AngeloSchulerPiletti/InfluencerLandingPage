@@ -14,6 +14,9 @@ import SectionContentCenter, {
 import SectionLinks, {
   type Props as LinkProps,
 } from '@/components/SectionLinks.vue'
+import SectionPicture, {
+  type Props as PictureProps,
+} from '@/components/SectionPicture.vue'
 
 export interface Props {
   navigation: NavigationProps
@@ -21,6 +24,7 @@ export interface Props {
   content: ContentProps
   contentCenter: ContentCenterProps
   links: LinkProps
+  picture: PictureProps
 }
 
 const props = defineProps<Props>()
@@ -36,6 +40,7 @@ const props = defineProps<Props>()
       <SectionContent v-bind="content" />
       <SectionContentCenter v-bind="contentCenter" />
       <SectionLinks v-bind="links" />
+      <SectionPicture v-bind="picture" />
     </main>
   </div>
 </template>
