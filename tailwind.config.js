@@ -3,6 +3,13 @@ module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,vue}'],
   theme: {
     extend: {
+      screens: {
+        xs: '375px',
+        sm: '375px',
+        md: '744px',
+        lg: '1024px',
+        xl: '1440px',
+      },
       fontSize: {
         lg: ['24px', '32px'], // Large
         md: ['20px', '32px'], // Medium
