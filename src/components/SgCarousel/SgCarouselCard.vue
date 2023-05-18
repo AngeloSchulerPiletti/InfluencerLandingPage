@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { Image } from '@/types/media.types'
 import SgIcon from '@/components/SgIcon.vue'
-import SgLink from '../SgLink.vue'
+import SgLink from '@/components/SgLink.vue'
 
 export interface Props {
   frame?: {
