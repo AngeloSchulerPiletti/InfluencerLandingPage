@@ -4,6 +4,7 @@ import type { StoryObjProped } from '@/types/storybook.types'
 import { SectionNavigationMock } from '@/stories/mock/sectionNavigation.mock'
 import { SectionIntroMock } from '@/stories/mock/sectionIntro.mock'
 import { SectionContentMock } from '@/stories/mock/sectionContent.mock'
+import { SectionContentCenterMock } from '@/stories/mock/sectionContentCenter.mock'
 
 const meta: Meta<typeof ViewHome> = {
   title: 'Views/Home',
@@ -22,5 +23,6 @@ export const Home: Story = {
     navigation: SectionNavigationMock,
     intro: SectionIntroMock,
     content: SectionContentMock,
+    contentCenter: SectionContentCenterMock,
   },
 }
