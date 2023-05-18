@@ -23,6 +23,12 @@
     @apply disabled:bg-secondary-200;
   }
 
+  &--fill-dark {
+    @apply bg-primary-200 text-secondary-900;
+    @apply hover:bg-primary-300;
+    @apply disabled:bg-neutral-600;
+  }
+
   &--outline {
     @apply border border-secondary-100 text-secondary-100 ring-0;
     @apply hover:bg-secondary-400 hover:text-primary-400 hover:ring-primary-400;
