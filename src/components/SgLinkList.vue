@@ -22,7 +22,7 @@ const getTextClasses = computed(() => {
 
 <template>
   <div>
-    <ul class="ml-6 flex flex-col gap-2">
+    <ul class="ml-6 flex flex-col gap-4">
       <li
         v-for="(link, index) in links"
         :key="index"
